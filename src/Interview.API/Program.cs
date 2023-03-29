@@ -1,4 +1,4 @@
-namespace Interview.API
+namespace ABB.Interview.API
 {
     public class Program
     {
