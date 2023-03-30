@@ -6,7 +6,11 @@ The file measurements.json in the data directory contains a list of measurements
 - Devices are grouped in two device groups: group_a and group_b.
 
 Requirements:
-1) Read the measurements.json file and store the values in the Measurements object.
+1) Read the measurements.json file and store the data in a Dictionary with key:
+    - resourceId
+    - deviceName
+    - deviceGroup
+    - direction
 2) Implement the "api/groups" endpoint that outputs the totals for both groups for in and outgoing power.
     - group, direction, power
     - The power total should have 4 decimal digits
