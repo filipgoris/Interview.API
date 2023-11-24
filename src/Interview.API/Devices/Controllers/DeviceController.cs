@@ -21,6 +21,8 @@ public class DeviceController : APIBaseController
     /// <summary>
     ///     Devices ordered ascending by Group and Direction, with ascending list of power.max/device
     /// </summary>
+    /// <response code="200">Success</response>
+    /// <response code="500">Something went wrong on the server</response>
     [HttpGet]
     public async Task<IActionResult> Get(CancellationToken cancellationToken)
     {
@@ -45,6 +47,8 @@ public class DeviceController : APIBaseController
     /// <summary>
     ///     Devices ordered ascending by Group, Direction, and Max(power.max)
     /// </summary>
+    /// <response code="200">Success</response>
+    /// <response code="500">Something went wrong on the server</response>
     [HttpGet]
     [Route("max")]
     public async Task<IActionResult> GetMax(CancellationToken cancellationToken)

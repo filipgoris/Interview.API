@@ -17,6 +17,11 @@ public class DeviceGroupController : APIBaseController
         _logger = logger;
     }
 
+    /// <summary>
+    ///     Total power by Group and Direction
+    /// </summary>
+    /// <response code="200">Success</response>
+    /// <response code="500">Something went wrong on the server</response>
     [HttpGet]
     public async Task<IActionResult> Get(CancellationToken cancellationToken)
     {
