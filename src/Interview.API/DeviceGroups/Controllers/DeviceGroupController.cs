@@ -11,7 +11,7 @@ public class DeviceGroupController : APIBaseController
 {
     private readonly ILogger<DeviceGroupController> _logger;
 
-    public DeviceGroupController(ILogger<DeviceGroupController> logger, IMeasurementReader reader) : base(reader)
+    public DeviceGroupController(ILogger<DeviceGroupController> logger, IMeasurementReader reader, IConfiguration config) : base(reader, config)
     {
         Guard.Against.Null(logger);
         _logger = logger;

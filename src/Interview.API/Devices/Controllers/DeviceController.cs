@@ -12,7 +12,7 @@ public class DeviceController : APIBaseController
 {
     private readonly ILogger<DeviceController> _logger;
 
-    public DeviceController(ILogger<DeviceController> logger, IMeasurementReader reader) : base(reader)
+    public DeviceController(ILogger<DeviceController> logger, IMeasurementReader reader, IConfiguration config) : base(reader, config)
     {
         Guard.Against.Null(logger);
         _logger = logger;
